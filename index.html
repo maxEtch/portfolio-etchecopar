@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Maxime ETCHECOPAR</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Animation pour la transition douce */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Amélioration des boutons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:hover {
+            background-color: #1e40af;
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Effets modernes sur les sections */
+        .section {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 0.75rem;
+            padding: 3rem;
+        }
+
+        .header-link {
+            position: relative;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            color: white;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .header-link:hover {
+            color: #dbeafe;
+            transform: translateY(-2px);
+        }
+
+        /* Légère ombre et hover sur les images */
+        .image-hover img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 0.75rem;
+        }
+
+        .image-hover img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        #contact {
+            background-color: #ffffff; /* Couleur personnalisée (exemple vert clair) */
+        }
+
+    </style>
+
+</head>
+<body class="bg-gray-50 text-gray-800 fade-in">
+
+    <!-- HEADER -->
+    <header class="bg-blue-600 text-white py-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-wide">Mon Portfolio</h1>
+            <nav>
+                <ul class="flex space-x-6"> 
+                    <li>
+                        <button onclick="window.location.href='#qui'" class="btn">À propos</button>
+                    </li>
+                    <li>
+                        <button onclick="window.location.href='#projets'" class="btn">Mes projets</button>
+                    </li>
+                    <li>
+                        <button onclick="window.location.href='#competences'" class="btn">Compétences</button>
+                    </li>
+                    <li>
+                        <button onclick="window.location.href='#contact'" class="btn">Contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section "Présentation" -->
+    <section id="presentation" class="py-20 bg-blue-600 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold mb-8">Bonjour, moi c'est Maxime ETCHECOPAR</h2>
+            <div class="bg-white text-gray-800 p-8 rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-3xl mx-auto max-w-3xl">
+                <p class="text-xl leading-relaxed">
+                    Bienvenue dans mon portfolio ! Je suis étudiant en BUT Informatique, passionné par le développement web, avec une affinité particulière pour le front-end.
+                    Ici, je vous présente tous les projets que j'ai eu le plaisir de réaliser. Chaque projet représente un pas de plus dans mon parcours.
+                    Je vous souhaite donc une agréable lecture !
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section "Qui suis-je ?" -->
+    <section id="qui" class="py-16 bg-white fade-in">
+        <div class="container mx-auto flex items-center">
+            <div class="text-lg max-w-2xl mx-auto section">
+                <h2 class="text-3xl font-semibold mb-6 text-center">Qui suis-je ?</h2>
+                <p class="leading-relaxed">
+                    Je suis actuellement en deuxième année de BUT Informatique à l’IUT d'Anglet. À ce jour, j'ai eu l'opportunité de concrétiser plusieurs projets personnels et académiques qui mettent en lumière mes compétences en développement, en design web et en base de données. Ces expériences m'ont permis d'approfondir mes connaissances tout en cultivant ma créativité. Je suis animé par le désir constant de progresser et d'explorer de nouvelles possibilités dans ce domaine dynamique et évolutif qu'est l'informatique.
+                </p>
+            </div>
+            <div class="ml-10 relative image-hover">
+                <img src="img/moi_cv.jpeg" alt="Photo de Maxime" class="w-80 h-80 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section "Mes Projets" -->
+    <section id="projets" class="py-16 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Mes Projets</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Projet "GureKultura" -->
+                <div class="relative group border-4 border-gray-300 rounded-lg overflow-hidden">
+                    <img src="img/GureKultura.webp" alt="GureKultura" class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">GureKultura</h3>
+                            <p class="text-lg">Un projet visant à valoriser la culture basque à travers une plateforme web interactive.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet "Nuit de l'Info 2024" -->
+                <div class="relative group border-4 border-gray-300 rounded-lg overflow-hidden">
+                    <img src="img/NDI.png" alt="Nuit de l'Info 2024" class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Nuit de l'Info 2024</h3>
+                            <p class="text-lg">
+                                Participation à un événement national, développant un projet en équipe dans un temps limité.
+                                <br>
+                                <a href="http://bablesponges.alwaysdata.net" target="_blank" class="text-blue-600 hover:underline">Voir le projet</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section "Mes Compétences" -->
+    <section id="competences" class="py-20 bg-gray-100 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold mb-12">Mes Compétences</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+                <!-- HTML -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">HTML</h3>
+                    <p class="text-gray-800">Création de pages web structurées, utilisation des balises sémantiques.</p>
+                </div>
+                <!-- CSS -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">CSS</h3>
+                    <p class="text-gray-800">Mise en forme des pages web avec des styles modernes, animations et responsive design.</p>
+                </div>
+                <!-- JavaScript -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">JavaScript</h3>
+                    <p class="text-gray-800">Développement d'interactivité avec JavaScript, manipulation du DOM et intégration d'APIs.</p>
+                </div>
+                <!-- Java -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Java</h3>
+                    <p class="text-gray-800">Programmation orientée objet avec Java, création d'applications robustes et évolutives.</p>
+                </div>
+                <!-- C++ -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">C++</h3>
+                    <p class="text-gray-800">Développement d'applications performantes, gestion de mémoire et optimisation de code.</p>
+                </div>
+                <!-- Python -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Python</h3>
+                    <p class="text-gray-800">Création de scripts, développement d'applications, et data science avec Python.</p>
+                </div>
+                <!-- PHP -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">PHP</h3>
+                    <p class="text-gray-800">Développement d'applications web dynamiques avec PHP et gestion de bases de données.</p>
+                </div>
+                <!-- MySQL -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">MySQL</h3>
+                    <p class="text-gray-800">Gestion des bases de données avec MySQL, optimisation des requêtes et des performances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section "Contact" -->
+    <section id="contact" class="py-16 bg-blue-600 text-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-black text-4xl font-bold mb-6">Me contacter</h2>
+            <p class="text-black text-xl mb-12">Si vous souhaitez en savoir plus sur mes projets ou collaborer, n'hésitez pas à me contacter !</p>
+            <a href="mailto:maxime.etchecopar@example.com" class="btn">Envoyer un Email</a>
+        </div>
+        <div class="mt-8">
+            <h2 class="text-black text-4xl font-bold mb-6">et retrouvez moi sur : </h2>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/maximeetchecopar" target="_blank" class="text-gray-800 font-bold text-lg underline">LinkedIn</a>
+            <!-- GitHub -->
+            <a href="https://github.com/maxEtch" target="_blank" class="text-gray-800 font-bold text-lg underline">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-left">
+            <p>&copy; 2024 Maxime ETCHECOPAR. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Ajoutez la classe "fade-in" à l'élément body lors du chargement de la page
+        window.addEventListener('load', function() {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+
+</body>
+</html>
